@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.DetailsFragment"
+    android:id="@+id/frameLayout4" >
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/textViewDetails2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/name"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewDetails1"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/img_description"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDetails2"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/textViewDetails3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/next_watering"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewDetails4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewDetails1" />
+
+            <TextView
+                android:id="@+id/textViewDetails4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/date_format3"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewDetails3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewDetails3" />
+
+            <TextView
+                android:id="@+id/textViewDetails5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/age"
+                app:layout_constraintEnd_toStartOf="@+id/textViewDetails6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/textViewDetails3"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDetails3" />
+
+            <TextView
+                android:id="@+id/textViewDetails6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="32dp"
+                android:text="@string/date_format2"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewDetails5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewDetails5" />
+
+
+            <Button
+                android:id="@+id/buttonDetails1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/secondary"
+                android:drawableEnd="@drawable/ic_watering"
+                android:text="@string/button_watered"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textViewDetails5"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDetails5"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/buttonDetails2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:backgroundTint="@color/color_delete"
+                android:drawableEnd="@drawable/ic_baseline_delete_24"
+                android:text="@string/button_delete"
+                app:layout_constraintBaseline_toBaselineOf="@+id/buttonDetails1"
+                app:layout_constraintStart_toEndOf="@+id/buttonDetails1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

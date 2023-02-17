@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="gr.auth.androidproject.plants.ui.home.HomeFragment"
+        android:label="@string/menu_home_nav_title"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_add_new"
+            app:destination="@id/nav_add_new" />
+        <action
+            android:id="@+id/action_nav_home_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_new"
+        android:name="gr.auth.androidproject.plants.ui.add_new.AddNewFragment"
+        android:label="@string/menu_add_new"
+        tools:layout="@layout/fragment_add_new" />
+
+    <fragment
+        android:id="@+id/nav_watering_cal"
+        android:name="gr.auth.androidproject.plants.ui.watering_calendar.WateringCalendarFragment"
+        android:label="@string/menu_watering_calendar"
+        tools:layout="@layout/fragment_water_calendar" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="gr.auth.androidproject.plants.ui.about.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="gr.auth.androidproject.plants.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+    <action
+        android:id="@+id/action_global_nav_settings"
+        app:destination="@id/nav_settings" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="gr.auth.androidproject.plants.ui.details.DetailsFragment"
+        android:label="@string/details_nav_title"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="position"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+</navigation>
